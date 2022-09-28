@@ -47,7 +47,7 @@ class ProductApiController extends Controller
            "price" => "required|numeric|min:1",
            "stock" => "required|numeric|min:1",
             "photos" => "required",
-            "photos.*" => "file|mimes:jpeg,png|max:512"
+            "photos.*" => "file|mimes:jpeg,png|max:5120"
         ]);
 
 //        return $request;

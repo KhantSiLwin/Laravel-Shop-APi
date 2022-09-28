@@ -29,7 +29,7 @@ class PhotoApiController extends Controller
         $request->validate([
             "product_id" => "required|exists:products,id",
             "photos" => "required",
-            "photos.*" => "file|mimes:jpeg,png|max:512"
+            "photos.*" => "file|mimes:jpeg,png|max:5120"
         ]);
 
         foreach ($request->file('photos') as $key=>$photo){
